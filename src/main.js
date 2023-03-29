@@ -4,3 +4,4 @@ import draggable from 'vuedraggable'
 
 createApp(App).use(draggable)
 createApp(App).mount('#app')
+
