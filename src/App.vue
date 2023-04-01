@@ -4,9 +4,9 @@
     <div className="bg-white bg-opacity-25 rounded-xl p-6 w-full max-w-6xl h-4/5">
       <div className="h-full flex flex-col md:flex-row rounded-lg overflow-hidden">
         <primitive-list className="w-full md:w-1/4 bg-opacity-50 p-4"></primitive-list>
-        <scene-canvas className="w-full md:w-1/2 flex-grow bg-black"></scene-canvas>
         <object-attribute-adjuster className="w-full md:w-1/4 bg-opacity-50 p-4"></object-attribute-adjuster>
       </div>
+      <scene-canvas className="w-1/2 flex-grow]"></scene-canvas>
     </div>
   </div>
 </template>

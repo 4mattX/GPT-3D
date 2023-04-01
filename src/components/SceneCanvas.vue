@@ -1,9 +1,9 @@
 <template>
-  <Renderer :antialias="true" ref="renderer">
-    <Camera :position="{ z: 10 }" />
+  <Renderer class="w-full border-2 border-indigo-600" :orbit-ctrl="true" :resize="true" :antialias="true" ref="renderer">
+    <Camera :position="{ z: 40 }" />
     <Scene>
       <PointLight :position="{ y: 50, z: 50 }" />
-      <Box ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
+      <Box size="10" ref="box" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
         <LambertMaterial />
       </Box>
     </Scene>
@@ -15,6 +15,7 @@
 export default {
   mounted() {
     const renderer = this.$refs.renderer;
+
     const box = this.$refs.box.mesh;
     renderer.onBeforeRender(() => {
       box.rotation.x += 0.01;
