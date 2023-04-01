@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import {Camera, Scene, Renderer, Box, LambertMaterial, PointLight} from 'troisjs';
 
 export default {
   mounted() {
@@ -21,7 +20,6 @@ export default {
       box.rotation.x += 0.01;
     });
   },
-  components: { Box, Camera, LambertMaterial, PointLight, Renderer, Scene },
   name: "JsonExportButton"
 }
 </script>
