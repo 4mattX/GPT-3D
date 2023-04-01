@@ -6,6 +6,7 @@
           class="list-group-item bg-gray-300 m-1 p-3 rounded-md text-center cursor-pointer"
           v-for="primitive in primitives"
           :key="primitive.name"
+          @mousedown="startDrag(primitive)"
       >
         {{ primitive.name }}
       </div>
@@ -38,6 +39,9 @@ export default defineComponent({
     }
   },
   methods: {
+    startDrag(primitive) {
+      this.$emit('drag-start', primitive)
+    },
     log(event) {
       console.log(event)
     },

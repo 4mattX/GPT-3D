@@ -21,6 +21,22 @@ export default {
       box.rotation.x += 0.01;
     });
   },
+  methods: {
+    addPrimitive(primitive) {
+      // const newPrimitive = new primitive.class(
+      //     { x: 0, y: 0, z: 0 },
+      //     { x: 0, y: 0, z: 0 },
+      //     { x: 1, y: 1, z: 1 },
+      //     0xffffff
+      // );
+      this.addObjectToScene(primitive);
+    },
+    addObjectToScene(object) {
+      console.log(JSON.stringify(object))
+      // Create a Three.js Mesh based on the object's properties
+      // and add it to the scene.
+    },
+  },
   name: "JsonExportButton"
 }
 </script>
